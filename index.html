@@ -9,11 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Added: spacing between project cards + AI-assistance note */
+    .project-card + .project-card { margin-top: 24px; }
+    .project-main .ai-note { margin: 14px 0; padding: 2px 0 2px 12px; border-left: 3px solid currentColor; font-size: .92rem; line-height: 1.6; opacity: .85; }
+  </style>
 </head>
 <body>
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
-
   <header class="navbar">
     <a class="brand" href="#home"><span>GJ</span> Gaurav Joshi</a>
     <button class="menu-btn" aria-label="Open menu">☰</button>
@@ -26,7 +30,6 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
   <main>
     <section id="home" class="hero section">
       <div class="hero-copy reveal">
@@ -46,7 +49,6 @@
           <a href="tel:+917820063161">+91 78200 63161</a>
         </div>
       </div>
-
       <div class="hero-visual reveal">
         <div class="profile-ring">
           <div class="profile-card">
@@ -67,7 +69,6 @@
         </div>
       </div>
     </section>
-
     <section id="about" class="section two-col">
       <div class="section-heading reveal">
         <p class="eyebrow">01 / ABOUT</p>
@@ -82,6 +83,8 @@
         <p>
           My recent work includes a 2D football goal-shooting game built with React Native and Expo,
           connected to PHP APIs and MySQL for authentication, game data and shop functionality.
+          I've also built two full-stack web apps: SkillBridge (Angular, Node.js, MongoDB) and
+          GoWithStudy (Next.js, PostgreSQL).
         </p>
         <div class="stats">
           <div><strong>2028</strong><span>Expected graduation</span></div>
@@ -90,7 +93,6 @@
         </div>
       </div>
     </section>
-
     <section id="skills" class="section">
       <div class="section-heading centered reveal">
         <p class="eyebrow">02 / SKILLS</p>
@@ -98,20 +100,18 @@
       </div>
       <div class="skills-grid">
         <article class="skill-card reveal"><span>01</span><h3>Programming</h3><p>C · Python · Java</p></article>
-        <article class="skill-card reveal"><span>02</span><h3>Frontend / Mobile</h3><p>React Native · Expo · HTML · CSS</p></article>
-        <article class="skill-card reveal"><span>03</span><h3>Backend</h3><p>PHP · Node.js · REST APIs</p></article>
-        <article class="skill-card reveal"><span>04</span><h3>Database</h3><p>MySQL · DBMS · Database Connectivity</p></article>
-        <article class="skill-card reveal"><span>05</span><h3>Development</h3><p>JavaScript · TypeScript · Authentication</p></article>
-        <article class="skill-card reveal"><span>06</span><h3>Tools & Core</h3><p>Git · GitHub · Computer Networks · COA</p></article>
+        <article class="skill-card reveal"><span>02</span><h3>Frontend / Mobile</h3><p>React Native · Expo · Next.js · Angular · Tailwind CSS · HTML · CSS</p></article>
+        <article class="skill-card reveal"><span>03</span><h3>Backend</h3><p>PHP · Node.js · Express.js · Prisma · REST APIs</p></article>
+        <article class="skill-card reveal"><span>04</span><h3>Database</h3><p>MySQL · PostgreSQL · MongoDB · DBMS · Database Connectivity</p></article>
+        <article class="skill-card reveal"><span>05</span><h3>Development</h3><p>JavaScript · TypeScript · Authentication · AI Integration</p></article>
+        <article class="skill-card reveal"><span>06</span><h3>Tools & Core</h3><p>Git · GitHub · Docker · Computer Networks · COA</p></article>
       </div>
     </section>
-
     <section id="projects" class="section">
       <div class="section-heading reveal">
-        <p class="eyebrow">03 / PROJECT</p>
-        <h2>One project,<br><span>many moving parts.</span></h2>
+        <p class="eyebrow">03 / PROJECTS</p>
+        <h2>Three projects,<br><span>many moving parts.</span></h2>
       </div>
-
       <article class="project-card reveal">
         <div class="project-number">01</div>
         <div class="project-main">
@@ -140,8 +140,65 @@
           </div>
         </div>
       </article>
+      <article class="project-card reveal">
+        <div class="project-number">02</div>
+        <div class="project-main">
+          <div class="project-meta">Angular · TypeScript · Node.js · Express.js · MongoDB · Gemini API · REST APIs</div>
+          <h3>SkillBridge — AI-Powered Job &amp; Internship Platform</h3>
+          <p>
+            A full-stack career platform where students, recruiters and admins work in one place,
+            with an ATS resume analyzer, resume builder, job marketplace, AI career mentor and mock interviews.
+          </p>
+          <p class="ai-note">🤖 <strong>AI-assisted build:</strong> I used AI tools for part of the coding, debugging and problem-solving, and did the rest myself, including feature integration, API and database work, and testing.</p>
+          <div class="feature-list">
+            <span>📄 ATS resume analyzer</span>
+            <span>🧾 Resume builder</span>
+            <span>💼 Job marketplace</span>
+            <span>🤖 AI career mentor</span>
+            <span>🎯 Skill-gap analysis</span>
+            <span>🎤 Mock interviews</span>
+            <span>🔐 JWT auth &amp; roles</span>
+            <span>🛡️ Admin console</span>
+          </div>
+          <div class="flow">
+            <span>Sign Up</span><b>→</b><span>Resume &amp; ATS</span><b>→</b><span>Find Jobs</span><b>→</b><span>Apply</span><b>→</b><span>Track</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn primary" href="https://github.com/igaurav25/SkillBridge" target="_blank" rel="noopener">View on GitHub ↗</a>
+            <a class="btn ghost" href="mailto:joshii.igaurav11@gmail.com?subject=SkillBridge%20Project">Ask About Project</a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card reveal">
+        <div class="project-number">03</div>
+        <div class="project-main">
+          <div class="project-meta">Next.js · TypeScript · Tailwind CSS · PostgreSQL · Prisma · Redis · Docker</div>
+          <h3>GoWithStudy — All-in-One Student Platform</h3>
+          <p>
+            A full-stack study platform that brings notes, an AI study assistant, timetable, assignments,
+            DSA tracking and community forums into one student dashboard.
+          </p>
+          <p class="ai-note">🤖 <strong>AI-assisted build:</strong> I used AI tools for part of the coding, debugging and problem-solving, and did the rest myself, including feature integration, API and database work, and testing.</p>
+          <div class="feature-list">
+            <span>📝 Notes &amp; PDF uploads</span>
+            <span>🤖 AI study assistant (RAG)</span>
+            <span>🗓️ Timetable</span>
+            <span>✅ Assignments</span>
+            <span>💻 DSA tracker</span>
+            <span>📌 Internship tracker</span>
+            <span>💬 Community forums</span>
+            <span>🔐 Secure auth &amp; roles</span>
+          </div>
+          <div class="flow">
+            <span>Sign Up</span><b>→</b><span>Dashboard</span><b>→</b><span>Notes &amp; AI</span><b>→</b><span>Plan</span><b>→</b><span>Track</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn primary" href="https://gowithstudy.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
+            <a class="btn ghost" href="https://github.com/igaurav25/gowithstudy" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </div>
+      </article>
     </section>
-
     <section id="experience" class="section two-col">
       <div class="section-heading reveal">
         <p class="eyebrow">04 / EXPERIENCE</p>
@@ -164,7 +221,6 @@
         </div>
       </div>
     </section>
-
     <section id="education" class="section">
       <div class="section-heading centered reveal">
         <p class="eyebrow">05 / EDUCATION</p>
@@ -182,7 +238,6 @@
         </div>
       </div>
     </section>
-
     <section id="credentials" class="section">
       <div class="section-heading reveal">
         <p class="eyebrow">06 / CREDENTIALS</p>
@@ -198,31 +253,28 @@
             <a href="assets/internship-certificate.jpg" target="_blank" class="text-link">Open ↗</a>
           </div>
         </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="contact-box reveal">
-        <p class="eyebrow">07 / CONTACT</p>
-        <h2>Let's build something<br><span>useful together.</span></h2>
-        <p>I'm open to internship and entry-level opportunities in software development and IT.</p>
-        <div class="contact-grid">
-          <a href="mailto:joshii.igaurav11@gmail.com"><small>Email</small><strong>joshii.igaurav11@gmail.com</strong></a>
-          <a href="tel:+917820063161"><small>Phone</small><strong>+91 78200 63161</strong></a>
-          <div><small>Location</small><strong>Kaladhungi, Nainital, Uttarakhand</strong></div>
+      </section>
+      <section id="contact" class="section contact-section">
+        <div class="contact-box reveal">
+          <p class="eyebrow">07 / CONTACT</p>
+          <h2>Let's build something<br><span>useful together.</span></h2>
+          <p>I'm open to internship and entry-level opportunities in software development and IT.</p>
+          <div class="contact-grid">
+            <a href="mailto:joshii.igaurav11@gmail.com"><small>Email</small><strong>joshii.igaurav11@gmail.com</strong></a>
+            <a href="tel:+917820063161"><small>Phone</small><strong>+91 78200 63161</strong></a>
+            <div><small>Location</small><strong>Kaladhungi, Nainital, Uttarakhand</strong></div>
+          </div>
+          <div class="hero-actions">
+            <a class="btn primary" href="mailto:joshii.igaurav11@gmail.com">Email Me ↗</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/gaurav-joshi-31b256413/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
         </div>
-        <div class="hero-actions">
-          <a class="btn primary" href="mailto:joshii.igaurav11@gmail.com">Email Me ↗</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/gaurav-joshi-31b256413/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <span>© <span id="year"></span> Gaurav Joshi</span>
-    <span>BTech CSE Student · Developer</span>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+      </section>
+    </main>
+    <footer>
+      <span>© <span id="year"></span> Gaurav Joshi</span>
+      <span>BTech CSE Student · Developer</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+  </html>
